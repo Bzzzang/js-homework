@@ -17,8 +17,10 @@ nav.addEventListener('click', (event) => {
   const li = event.target.closest('li');
     
   if (li) {
-    const index = parseInt(li.getAttribute('data-index')) - 1;  // 0-based index
+    const index = parseInt(li.getAttribute('data-index')) - 1;
     const item = data[index];
+
+    const [colorA, colorB] = item.color; // 
         
     setImage(visual, item.name);
     
@@ -42,7 +44,7 @@ function setBgColor(colorA, colorB) {
 
 // 이미지 설정 함수
 function setImage(target, name) {
-  target.src = `./assets/${name.toLowerCase()}.jpeg`;  // 대소문자에 맞게 파일명 변환
+  target.src = `./assets/${name.toLowerCase()}.jpeg`;
   target.alt = `${name} 포스터`;
 }
 
