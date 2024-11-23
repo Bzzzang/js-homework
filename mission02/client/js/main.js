@@ -20,11 +20,11 @@ nav.addEventListener('click', (event) => {
     const index = parseInt(li.getAttribute('data-index')) - 1;
     const item = data[index];
 
-    const [colorA, colorB] = item.color; // 
+    const [colorA, colorB] = item.color; 
         
     setImage(visual, item.name);
     
-    setBgColor(item.colorA, item.colorB);
+    setBgColor(colorA, colorB); 
     
     setNameText(nameText, item.name);
         
@@ -36,8 +36,8 @@ nav.addEventListener('click', (event) => {
 
 // 배경 색상 설정 함수
 function setBgColor(colorA, colorB) {
-  console.log(`Setting background to: linear-gradient(to bottom, ${colorA}, ${colorB})`); // undefined
-  console.log(`colorA: ${item.colorA}, colorB: ${item.colorB}`); // Uncaught ReferenceError: item is not defined
+  // console.log(`Setting background to: linear-gradient(to bottom, ${colorA}, ${colorB})`); // undefined
+  // console.log(`colorA: ${item.colorA}, colorB: ${item.colorB}`); // Uncaught ReferenceError: item is not defined
 
   document.body.style.background = `linear-gradient(to bottom, ${colorA}, ${colorB})`;
 }
@@ -54,7 +54,13 @@ function setNameText(target, name) {
 }
 
 
+// const [colorA, colorB] = item.color; 
+// setBgColor(colorA, colorB); 로 변경하면
+// console.log(`Setting background to: linear-gradient(to bottom, ${colorA}, ${colorB})`);
+// => Setting background to: linear-gradient(to bottom, #1ca9f8, #000054) 
 
+
+// 색상이 제대로 찍히긴 하는데 변경은 안 되고..............는 성공!
 
 
 
