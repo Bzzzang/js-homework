@@ -60,7 +60,7 @@ function setNameText(target, name) {
 // => Setting background to: linear-gradient(to bottom, #1ca9f8, #000054) 
 
 
-// 색상이 제대로 찍히긴 하는데 변경은 안 되고..............는 성공!
+// 색상이 제대로 찍히긴 하는데 변경은 안 되고..............
 
 
 
